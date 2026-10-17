@@ -5,34 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Pages Lab</title>
   <link rel="stylesheet" href="style.css">
+  <!-- นำเข้าฟอนต์ Google Fonts (Prompt) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="card">
-    <h1>My Web Development Portfolio</h1>
-    <p id="status">Ready to deploy</p>
-    <button id="helloBtn">Say Hello</button>
-    <button id="themeBtn">Toggle Theme</button>
+    <header class="profile-header">
+      <div class="avatar">💻</div>
+      <h1>My Web Development Portfolio</h1>
+      <span id="status" class="status-badge">Ready to deploy</span>
+    </header>
+
+    <div class="action-buttons">
+      <button id="helloBtn" class="btn btn-primary">Say Hello</button>
+      <button id="themeBtn" class="btn btn-secondary">Toggle Theme</button>
+    </div>
+
+    <hr class="divider">
 
     <!-- ส่วนที่ 1: About Me -->
-     <section class="info-section">
+    <section class="info-section">
       <h2>About Me</h2>
-      <p>ชื่อ: [ใส่ชื่อ-นามสกุลของคุณ] | รหัสนิสิต: 67160385</p>
-      <p>กำลังศึกษาคณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา</p>
+      <div class="info-box">
+        <p><strong>ชื่อ:</strong> อัญชิสา นิยมชัย</p>
+        <p><strong>รหัสนิสิต:</strong> 67160385</p>
+        <p>คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา</p>
+      </div>
     </section>
 
     <!-- ส่วนที่ 2: Skills -->
     <section class="info-section">
       <h2>Skills</h2>
-      <ul>
-        <li>HTML / CSS / JavaScript</li>
-        <li>Git & GitHub Actions</li>
-      </ul>
+      <div class="skills-grid">
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Git & GitHub</span>
+        <span class="skill-tag">GitHub Actions</span>
+      </div>
     </section>
 
     <!-- ส่วนที่ 3: Contact -->
     <section class="info-section">
       <h2>Contact</h2>
-      <p>Email: 67160385@go.buu.ac.th</p>
+      <div class="contact-box">
+        <a href="mailto:67160385@go.buu.ac.th" class="contact-link">
+        67160385@go.buu.ac.th
+        </a>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>

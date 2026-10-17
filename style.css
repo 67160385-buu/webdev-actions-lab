@@ -1,31 +1,180 @@
-body { 
-  font-family: system-ui, sans-serif; 
-  background: #e6fff7;       
-  margin: 0; 
-  min-height: 100vh; 
-  display: grid; 
-  place-items: center; 
+:root {
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-sub: #475569;
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary-bg: #f1f5f9;
+  --secondary-text: #1e293b;
+  --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --badge-bg: #dbeafe;
+  --badge-text: #1e40af;
+  --border-color: #e2e8f0;
 }
-.card { 
-  background: rgb(250, 198, 198); 
-  padding: 40px; 
-  border-radius: 18px;        
-  box-shadow: 0 12px 32px #1e3a5f20; 
-  text-align: center; 
-}
-button { 
-  background: #6ff0d4; 
-  color: rgb(18, 37, 39); 
-  border: 0;         
-  padding: 12px 22px; 
-  border-radius: 8px; 
-  cursor: pointer; 
-}
+
 .dark-mode {
-  background: #121212;
-  color: white;
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-sub: #94a3b8;
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --secondary-bg: #334155;
+  --secondary-text: #f1f5f9;
+  --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --badge-bg: #1e3a8a;
+  --badge-text: #93c5fd;
+  --border-color: #334155;
 }
-.dark-mode .card {
-  background: #1e1e1e;
-  color: white;
+
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  font-family: 'Prompt', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 28px;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.avatar {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: var(--text-main);
+}
+
+.status-badge {
+  display: inline-block;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 20px 0;
+}
+
+.info-section {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.info-section h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.info-box {
+  background-color: var(--secondary-bg);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.info-box p {
+  margin: 4px 0;
+  color: var(--text-sub);
+}
+
+.info-box strong {
+  color: var(--text-main);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+.contact-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: var(--secondary-bg);
+  font-size: 0.9rem;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }
