@@ -1,3 +1,11 @@
 document.querySelector('#helloBtn').addEventListener('click', () => {
   document.querySelector('#status').textContent = 'Hello from GitHub Pages!';
 });
+document.querySelector('#helloBtn').addEventListener('click', () => {
+  document.querySelector('#status').textContent = 'Hello from GitHub Pages!';
+});
+
+// ฟังก์ชัน Toggle Theme (สลับธีมมืด/สว่าง)
+document.querySelector('#themeBtn').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
